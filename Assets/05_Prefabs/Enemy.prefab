@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 30
-  speed: 10
+  speed: 7.5
   killEffect: {fileID: 4307802073481482448, guid: 76fa822df5f609747ad6ce79958de732, type: 3}
 --- !u!70 &5584678089545977063
 CapsuleCollider2D:
