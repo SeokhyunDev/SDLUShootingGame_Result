@@ -18,18 +18,18 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         int randValue = UnityEngine.Random.Range(0, 10);
-        Debug.Log(randValue);
         switch (randValue)
         {
             case 1:
                 transform.localScale = new Vector3(0.5f, 1.25f, 1);
+                life = 2;
                 break;
             case 3:
                 spin = true;
-                life = 3;
+                life = 2;
                 break;
             default:
-                Debug.Log(randValue);
+                life = 2;
                 break;
         }
         sp = GetComponent<SpriteRenderer>();
@@ -57,6 +57,8 @@ public class EnemyMove : MonoBehaviour
             life -= 1;
             if(life <= 0)
             {
+                Point.Instance.PlusPoint();
+                PlayerPrefs.SetInt("score", Point.Instance.point);
                 GameObject e = Instantiate(killEffect, transform.position, Quaternion.identity);
                 col.enabled = false;
                 sp.enabled = false;

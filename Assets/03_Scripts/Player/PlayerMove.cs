@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetInt("score", 0);
         transform.position = new Vector3(-6.4f, 0, 0);
 
         col = GetComponent<Collider2D>();
@@ -53,6 +54,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
+            
             StartCoroutine(BlankAndKill());
         }
     }
