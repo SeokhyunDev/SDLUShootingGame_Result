@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Point : MonoBehaviour
+public class Point : MonoBehaviour 
 {
     public static Point Instance;
     private void Awake()
